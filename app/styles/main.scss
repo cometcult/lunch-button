@@ -312,9 +312,28 @@ header.top {
     }
 }
 
+.main-button {
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 30%;
+    top: -webkit-calc(35% - 55px);
+    top: calc(35% - 55px);
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .container.main {
     &.ng-hide-add {
-        @include transition(.6s ease-in all);
+        @include transition(.5s ease-in all);
         @include transform(translate3d(0, -100%, 0));
         display: table !important;
     }
@@ -326,7 +345,7 @@ header.top {
 
 .container.result {
     &.ng-hide-remove {
-        @include transition(.6s ease-out all);
+        @include transition(.5s ease-out all);
         @include transform(translate3d(0, -100%, 0));
         display: table !important;
     }
@@ -349,11 +368,9 @@ header.top {
     }
 
     &.ng-leave {
-        opacity: 0;
     }
 
     &.ng-leave.ng-leave-active {
-
     }
 }
 
@@ -380,6 +397,15 @@ h1.funny-text {
         .loading & {
             @include animation(shake-bg .5s infinite);
         }
+    }
+
+    .main-button {
+        width: 100px;
+        height: 100px;
+        left: -webkit-calc(50% - 50px);
+        left: calc(50% - 50px);
+        top: -webkit-calc(35% - 40px);
+        top: calc(35% - 40px);
     }
 
     .category {
@@ -533,16 +559,19 @@ h1.funny-text {
 }
 
 @-webkit-keyframes splash {
-    from { @include transform(scale(.1)); }
-    to { @include transform(scale(1)); }
+    0% { opacity: 0; @include transform(scale(.1)); }
+    2% { opacity: 1; @include transform(scale(.1)); }
+    100% { @include transform(scale(1)); }
 }
 
 @-moz-keyframes splash {
-    from { @include transform(scale(.1)); }
-    to { @include transform(scale(1)); }
+    0% { opacity: 0; @include transform(scale(.1)); }
+    2% { opacity: 1; @include transform(scale(.1)); }
+    100% { @include transform(scale(1)); }
 }
 
 @keyframes splash {
-    from { @include transform(scale(.1)); }
-    to { @include transform(scale(1)); }
+    0% { opacity: 0; @include transform(scale(.1)); }
+    2% { opacity: 1; @include transform(scale(.1)); }
+    100% { @include transform(scale(1)); }
 }
