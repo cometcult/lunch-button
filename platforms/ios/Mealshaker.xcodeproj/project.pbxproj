@@ -6,14 +6,17 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
+		117A0E23CCCC4AB2BD1A5166 /* AdmobAdPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABFC95C42154599A512DCB4 /* AdmobAdPlugin.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		3012C0B319C9B9920020110B /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3012C0AD19C9B9920020110B /* libTestFlight.a */; };
+		3012C0B419C9B9920020110B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3012C0AE19C9B9920020110B /* README.md */; };
+		3012C0B519C9B9920020110B /* release_notes.md in Sources */ = {isa = PBXBuildFile; fileRef = 3012C0AF19C9B9920020110B /* release_notes.md */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		30541E9E18B6AA81005CABF4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C66DAE18A91A13002FF491 /* libTestFlight.a */; };
 		30541E9F18B737C1005CABF4 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302B62F718AC25420049B6FD /* libGoogleAnalyticsServices.a */; };
 		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
 		3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */; };
@@ -26,8 +29,6 @@
 		308D05381370CCF300D202BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
 		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
 		30A0434814DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
-		30C66DB518A91A13002FF491 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 30C66DAF18A91A13002FF491 /* README.md */; };
-		30C66DB618A91A13002FF491 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 30C66DB018A91A13002FF491 /* release_notes.md */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		4871BEA019C2E207001F7B17 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4871BE9F19C2E207001F7B17 /* CDVLocation.m */; };
 		4897650219825B57008FE38F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4897650119825B57008FE38F /* FacebookSDK.framework */; };
@@ -47,6 +48,7 @@
 		526A1D7C7B02438CB623596A /* libGoogleAnalyticsServices.a in Sources */ = {isa = PBXBuildFile; fileRef = 4313C4F081B74C8DBC45A4AC /* libGoogleAnalyticsServices.a */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		5C3A8F6691C04743AA18A2C6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B563690B46984D19841136B1 /* StoreKit.framework */; };
 		73E61892E0554F0F9F5A8D7B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6455695022E14EEDAED69645 /* Social.framework */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
 		7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
@@ -62,7 +64,10 @@
 		9E1C13A9CCA04E08BCF406CA /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 897A6BE0AFEE4A058B613280 /* libGoogleAnalyticsServices.a */; };
 		B1F4140270F846E1AF69C085 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2D5B5FC44284066B8C90E55 /* CDVNotification.bundle */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		F0CFA357861C419D8D6C5309 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4183C9528B491897A043A9 /* AVFoundation.framework */; };
+		F21B1CD6684044728A7701B8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F75064E022469DBEF0F458 /* MessageUI.framework */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
+		FCE938C76D1D49E090D25484 /* AdmobAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32A59A47F494812B466C05D /* AdmobAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,12 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CD1E7A536B6427E889FC048 /* CDVSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = org.apache.cordova.splashscreen/CDVSplashScreen.h; sourceTree = "<group>"; };
+		3012C0AD19C9B9920020110B /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		3012C0AE19C9B9920020110B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3012C0AF19C9B9920020110B /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = release_notes.md; sourceTree = "<group>"; };
+		3012C0B019C9B9920020110B /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		3012C0B119C9B9920020110B /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		3012C0B219C9B9920020110B /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302B62F118AC253C0049B6FD /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
@@ -118,12 +129,6 @@
 		308D05301370CCF300D202BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		30A0434414DC770100060A13 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Localizable.strings; sourceTree = "<group>"; };
 		30A0434714DC770100060A13 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Localizable.strings; sourceTree = "<group>"; };
-		30C66DAE18A91A13002FF491 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		30C66DAF18A91A13002FF491 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		30C66DB018A91A13002FF491 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		30C66DB118A91A13002FF491 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		30C66DB218A91A13002FF491 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		30C66DB318A91A13002FF491 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		30C66DB918A91B48002FF491 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Mealshaker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mealshaker-Prefix.pch"; sourceTree = "<group>"; };
@@ -131,6 +136,7 @@
 		3DB461EA06924731AE291D35 /* SocialMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialMessage.m; path = socialmessage/SocialMessage.m; sourceTree = "<group>"; };
 		4313C4F081B74C8DBC45A4AC /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = com.danielcwilson.plugins.googleanalytics/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		462D178E4EFD479A86C52AE1 /* CDVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVLogger.h; path = org.apache.cordova.console/CDVLogger.h; sourceTree = "<group>"; };
+		484FF26019DBF79F00B2E7A3 /* Mealshaker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Mealshaker.xcodeproj; sourceTree = "<group>"; };
 		4871BE9E19C2E207001F7B17 /* CDVLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVLocation.h; path = org.apache.cordova.geolocation/CDVLocation.h; sourceTree = "<group>"; };
 		4871BE9F19C2E207001F7B17 /* CDVLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVLocation.m; path = org.apache.cordova.geolocation/CDVLocation.m; sourceTree = "<group>"; };
 		4897650119825B57008FE38F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 		67975222ED524FC5A578DE70 /* SocialMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialMessage.m; path = socialmessage/SocialMessage.m; sourceTree = "<group>"; };
 		67EF6FAFAC414092A4BC2BC8 /* SocialMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialMessage.h; path = socialmessage/SocialMessage.h; sourceTree = "<group>"; };
 		692BC93D589C4A3C95E3DE22 /* social.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = social.framework; path = System/Library/Frameworks/social.framework; sourceTree = SDKROOT; };
+		6ABFC95C42154599A512DCB4 /* AdmobAdPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdmobAdPlugin.m; path = com.admob.AdmobPlugin/AdmobAdPlugin.m; sourceTree = "<group>"; };
+		6E4183C9528B491897A043A9 /* AVFoundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7167706AB271441BA57CE135 /* CanOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CanOpen.h; path = com.philmerrell.cordova.canopen/CanOpen.h; sourceTree = "<group>"; };
 		7D74277B3F914A48A40019FA /* CDVNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = org.apache.cordova.dialogs/CDVNotification.m; sourceTree = "<group>"; };
 		7E7966D41810823500FA85AD /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
@@ -162,10 +170,12 @@
 		8DE9A0A4243D41F5BA9E5464 /* CordovaFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CordovaFacebook.h; path = com.ccsoft.plugin.CordovaFacebook/CordovaFacebook.h; sourceTree = "<group>"; };
 		9B8C8FE844F9427F860A6670 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = com.danielcwilson.plugins.googleanalytics/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		A0D5A05D3A5C4A1A9688CCB2 /* UniversalAnalyticsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniversalAnalyticsPlugin.h; path = com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.h; sourceTree = "<group>"; };
+		A32A59A47F494812B466C05D /* AdmobAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdmobAPI.framework; path = Mealshaker/Plugins/com.admob.AdmobPlugin/AdmobAPI.framework; sourceTree = "<group>"; };
 		A3A5ADF0F1C94C17B8C1331D /* Foundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A54DE2594E274CA493076350 /* SystemConfiguration.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ACD60122E31B4FEC9BCDB649 /* SocialMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialMessage.h; path = socialmessage/SocialMessage.h; sourceTree = "<group>"; };
 		B4EA2091C39C4155A09B146C /* AudioToolbox.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B563690B46984D19841136B1 /* StoreKit.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B635812C98744B73AE8158E4 /* CordovaFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CordovaFacebook.m; path = com.ccsoft.plugin.CordovaFacebook/CordovaFacebook.m; sourceTree = "<group>"; };
 		B7EDB67308F34206817A9431 /* CoreData.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B86BD17C46C74B43BA76AAB9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -176,11 +186,13 @@
 		CA9350C4018B4CAA9382CA63 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.m; sourceTree = "<group>"; };
 		CB02131D1D294A3C85D81D51 /* AdSupport.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		D4F75064E022469DBEF0F458 /* MessageUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E16CA075CADA465A80DBA2FD /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = com.danielcwilson.plugins.googleanalytics/GAITrackedViewController.h; sourceTree = "<group>"; };
 		E2D5B5FC44284066B8C90E55 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVNotification.bundle; sourceTree = "<group>"; };
 		E5BA9CD4330C4FA5B9B1C188 /* libFlurry_4.3.1.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libFlurry_4.3.1.a; path = Mealshaker/Plugins/com.phonegap.plugins.flurry/libFlurry_4.3.1.a; sourceTree = "<group>"; };
 		E9056F86DFF14E3B97442B43 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Mealshaker/config.xml; sourceTree = "<group>"; };
+		FA46FA0F7BF54F23835CB84F /* AdmobAdPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdmobAdPlugin.h; path = com.admob.AdmobPlugin/AdmobAdPlugin.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,11 +203,11 @@
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				4897650F19825DE0008FE38F /* AudioToolbox.framework in Frameworks */,
 				4897650719825BCC008FE38F /* libz.dylib in Frameworks */,
+				3012C0B319C9B9920020110B /* libTestFlight.a in Frameworks */,
 				4897650619825BA2008FE38F /* AdSupport.framework in Frameworks */,
 				4897650519825B82008FE38F /* Security.framework in Frameworks */,
 				4897650319825B61008FE38F /* CoreData.framework in Frameworks */,
 				4897650219825B57008FE38F /* FacebookSDK.framework in Frameworks */,
-				30541E9E18B6AA81005CABF4 /* libTestFlight.a in Frameworks */,
 				30541E9F18B737C1005CABF4 /* libGoogleAnalyticsServices.a in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
@@ -204,6 +216,10 @@
 				9E1C13A9CCA04E08BCF406CA /* libGoogleAnalyticsServices.a in Frameworks */,
 				9AB90B9F0006445092EB4370 /* libsqlite3.0.dylib in Frameworks */,
 				73E61892E0554F0F9F5A8D7B /* Social.framework in Frameworks */,
+				FCE938C76D1D49E090D25484 /* AdmobAPI.framework in Frameworks */,
+				5C3A8F6691C04743AA18A2C6 /* StoreKit.framework in Frameworks */,
+				F21B1CD6684044728A7701B8 /* MessageUI.framework in Frameworks */,
+				F0CFA357861C419D8D6C5309 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +266,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				30C66DAD18A91A13002FF491 /* TestFlightSDK2 */,
+				3012C0AC19C9B9920020110B /* TestFlightSDK3 */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -294,6 +310,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				484FF26019DBF79F00B2E7A3 /* Mealshaker.xcodeproj */,
 				4897650419825B82008FE38F /* Security.framework */,
 				4897650119825B57008FE38F /* FacebookSDK.framework */,
 				30C66DB918A91B48002FF491 /* libz.dylib */,
@@ -313,8 +330,25 @@
 				897A6BE0AFEE4A058B613280 /* libGoogleAnalyticsServices.a */,
 				B86BD17C46C74B43BA76AAB9 /* libsqlite3.0.dylib */,
 				6455695022E14EEDAED69645 /* Social.framework */,
+				A32A59A47F494812B466C05D /* AdmobAPI.framework */,
+				B563690B46984D19841136B1 /* StoreKit.framework */,
+				D4F75064E022469DBEF0F458 /* MessageUI.framework */,
+				6E4183C9528B491897A043A9 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3012C0AC19C9B9920020110B /* TestFlightSDK3 */ = {
+			isa = PBXGroup;
+			children = (
+				3012C0AD19C9B9920020110B /* libTestFlight.a */,
+				3012C0AE19C9B9920020110B /* README.md */,
+				3012C0AF19C9B9920020110B /* release_notes.md */,
+				3012C0B019C9B9920020110B /* TestFlight+AsyncLogging.h */,
+				3012C0B119C9B9920020110B /* TestFlight+ManualSessions.h */,
+				3012C0B219C9B9920020110B /* TestFlight.h */,
+			);
+			path = TestFlightSDK3;
 			sourceTree = "<group>";
 		};
 		301BF52E109A57CC0062928A /* Products */ = {
@@ -362,6 +396,8 @@
 				8846FA9786F6486E88443D4A /* GAITracker.h */,
 				3DB461EA06924731AE291D35 /* SocialMessage.m */,
 				67EF6FAFAC414092A4BC2BC8 /* SocialMessage.h */,
+				6ABFC95C42154599A512DCB4 /* AdmobAdPlugin.m */,
+				FA46FA0F7BF54F23835CB84F /* AdmobAdPlugin.h */,
 			);
 			name = Plugins;
 			path = Mealshaker/Plugins;
@@ -418,17 +454,9 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
-		30C66DAD18A91A13002FF491 /* TestFlightSDK2 */ = {
+		30E7961E19DD40D100B38448 /* Products */ = {
 			isa = PBXGroup;
-			children = (
-				30C66DAE18A91A13002FF491 /* libTestFlight.a */,
-				30C66DAF18A91A13002FF491 /* README.md */,
-				30C66DB018A91A13002FF491 /* release_notes.md */,
-				30C66DB118A91A13002FF491 /* TestFlight+AsyncLogging.h */,
-				30C66DB218A91A13002FF491 /* TestFlight+ManualSessions.h */,
-				30C66DB318A91A13002FF491 /* TestFlight.h */,
-			);
-			path = TestFlightSDK2;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +515,10 @@
 					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
 					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 				},
+				{
+					ProductGroup = 30E7961E19DD40D100B38448 /* Products */;
+					ProjectRef = 484FF26019DBF79F00B2E7A3 /* Mealshaker.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -514,7 +546,6 @@
 				7E7966E41810823500FA85AD /* icon-76.png in Resources */,
 				7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */,
 				308D05371370CCF300D202BF /* icon-72.png in Resources */,
-				30C66DB618A91A13002FF491 /* release_notes.md in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
 				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
 				1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */,
@@ -526,7 +557,6 @@
 				3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */,
 				3088BBBE154F3926009F9C59 /* Default-Landscape~ipad.png in Resources */,
 				3088BBBF154F3926009F9C59 /* Default-Portrait@2x~ipad.png in Resources */,
-				30C66DB518A91A13002FF491 /* README.md in Resources */,
 				7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */,
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
 				7E7966DE1810823500FA85AD /* icon-40.png in Resources */,
@@ -574,10 +604,13 @@
 				4897650C19825DBB008FE38F /* CDVNotification.m in Sources */,
 				4897650D19825DBB008FE38F /* CDVInAppBrowser.m in Sources */,
 				4897650E19825DBB008FE38F /* UniversalAnalyticsPlugin.m in Sources */,
+				3012C0B519C9B9920020110B /* release_notes.md in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				3012C0B419C9B9920020110B /* README.md in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				526A1D7C7B02438CB623596A /* libGoogleAnalyticsServices.a in Sources */,
+				117A0E23CCCC4AB2BD1A5166 /* AdmobAdPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +670,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Miszy/Documents/FacebookSDK,
+					"\"Mealshaker/Plugins/com.admob.AdmobPlugin\"",
+					"\"$(SRCROOT)/FacebookSDK\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -650,8 +684,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Mealshaker/Plugins\"/**",
-					/Users/Miszy/Documents/TestFlightSDK3.0.2,
+					"\"$(SRCROOT)/TestFlightSDK3\"",
 					"\"$(SRCROOT)/Mealshaker/Plugins/com.danielcwilson.plugins.googleanalytics\"",
+					"$(PROJECT_DIR)/TestFlightSDK3",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -667,7 +702,6 @@
 					"-force_load",
 					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
 					"-ObjC",
-					"-all_load",
 				);
 				PRODUCT_NAME = Mealshaker;
 				PROVISIONING_PROFILE = "";
@@ -686,7 +720,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Miszy/Documents/FacebookSDK,
+					"\"Mealshaker/Plugins/com.admob.AdmobPlugin\"",
+					"\"$(SRCROOT)/FacebookSDK\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mealshaker/Mealshaker-Prefix.pch";
@@ -697,8 +732,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Mealshaker/Plugins\"/**",
-					/Users/Miszy/Documents/TestFlightSDK3.0.2,
+					"\"$(SRCROOT)/TestFlightSDK3\"",
 					"\"$(SRCROOT)/Mealshaker/Plugins/com.danielcwilson.plugins.googleanalytics\"",
+					"$(PROJECT_DIR)/TestFlightSDK3",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -714,7 +750,6 @@
 					"-force_load",
 					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
 					"-ObjC",
-					"-all_load",
 				);
 				PRODUCT_NAME = Mealshaker;
 				PROVISIONING_PROFILE = "";

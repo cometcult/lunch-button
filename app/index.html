@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-class="{cordova: isCordova}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,24 +63,24 @@
     <div class="app-ad">
         <img src="images/logo.png" alt="Mealshaker's logo">
         <h1 class="visuallyhidden">Mealshaker</h1>
-        <p>Shake your phone to find a place to eat or drink. Brutally simple and fun. Try it now - just open this page on your phone or download our iPhone app.</p>
-        <a class="download-app" href="https://itunes.apple.com/us/app/mealshaker/id821119886">Download App</a>
     </div>
     <div class="phone-container">
         <main role="main" ng-view ng-class="ngViewClasses" anim-class></main>
     </div>
 
     <footer class="mobile-hide app-footer">
+        <a class="download-app" href="https://itunes.apple.com/us/app/mealshaker/id821119886">Download App</a>
         <ul>
             <li><button facebook-share class="facebook">facebook</button></li>
             <li><button twitter-share class="twitter">twitter</button></li>
         </ul>
         <p>
             <a href="mailto:contact@mealshaker.com">contact@mealshaker.com</a><br>
-            &copy; 2014 The Comet Cult All Rights Reserved
+            &copy; 2015 <a href="http://thecometcult.com/">The Comet Cult</a> All Rights Reserved
         </p>
     </footer>
 
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
 
     <!-- build:js scripts/plugins.js -->
@@ -90,6 +90,8 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ngStorage/src/angularLocalStorage.js"></script>
     <script src="bower_components/ta-angularjs-slider/dist/rzslider.min.js"></script>
     <script src="bower_components/swiftclick/js/dist/swiftclick.min.js"></script>
     <script src="bower_components/shake.js/shake.js"></script>
@@ -105,6 +107,9 @@
     <script src="scripts/services/utils.js"></script>
     <script src="scripts/directives/social.dir.js"></script>
     <script src="scripts/directives/resize.dir.js"></script>
+    <script src="scripts/directives/mealshakerAd.dir.js"></script>
+    <script src="scripts/directives/mealshakerDraggable.dir.js"></script>
+    <script src="scripts/directives/cantSwipeThis.js"></script>
     <!-- endbuild -->
 
     <script>

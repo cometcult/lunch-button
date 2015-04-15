@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.thecometcult.mealshaker" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.thecometcult.mealshaker" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Hello Cordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -52,6 +52,9 @@
     <description>
         Shake to find a place to eat
     </description>
+    <feature name="AdmobPlugin">
+        <param name="ios-package" value="AdmobAdPlugin" />
+    </feature>
     <name>Mealshaker</name>
     <description>
         Shake to find a place to eat

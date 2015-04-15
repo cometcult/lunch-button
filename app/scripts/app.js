@@ -7,8 +7,11 @@ angular.module('lunchButtonApp', [
   'ngTouch',
   'ngAnimate',
   'rzModule',
+  'angularLocalStorage',
   'lunchButtonApp.social',
-  'lunchButtonApp.resize'
+  'lunchButtonApp.resize',
+  'lunchButtonApp.mealshakerAd',
+  'lunchButtonApp.mealshakerDraggable'
 ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
@@ -36,4 +39,7 @@ angular.module('lunchButtonApp', [
       .otherwise({
         redirectTo: '/'
       });
+  }])
+  .run(['$rootScope', 'Utils', function ($rootScope, Utils) {
+    $rootScope.isCordova = Utils.isCordova();
   }]);

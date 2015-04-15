@@ -2,8 +2,10 @@
 
 angular.module('lunchButtonApp')
   .controller('MainCtrl',
-  ['$scope', '$rootScope', '$window', '$timeout', '$q', '$sce', '$filter', '$location', 'Foursquareapi', 'Geolocation', 'Utils', 'Analytics',
-  function ($scope, $rootScope, $window, $timeout, $q, $sce, $filter, $location, Foursquareapi, Geolocation, Utils, Analytics) {
+  ['$scope', '$rootScope', '$window', '$timeout', '$q', '$sce', '$filter', '$location', 'Foursquareapi', 'Geolocation', 'Utils', 'Analytics', 'storage',
+  function ($scope, $rootScope, $window, $timeout, $q, $sce, $filter, $location, Foursquareapi, Geolocation, Utils, Analytics, storage) {
+    var TEXT_TIMEOUT = 2000;
+
     $scope.categories = [{
       id: 'meal',
       text: 'to eat'
@@ -13,7 +15,7 @@ angular.module('lunchButtonApp')
     }];
     $scope.search = {};
     $scope.loadingTextIndex = '';
-    $scope.search.distance = 800;
+    storage.bind($scope, 'search.distance', {defaultValue: 800});
 
     $rootScope.currentCategory = $rootScope.currentCategory || 'meal';
 
@@ -29,8 +31,8 @@ angular.module('lunchButtonApp')
     var lastTextIndex;
 
     var allTexts = {
-        meal: ['Rolling up some meatballs', 'Sniffing for hot sausage', 'Wrapping up tacos', 'Firing up the grill', 'Pouring some hot choco', 'Putting a cherry on top', 'Laying Bacon strips!', 'Opening duck season', 'Chickening out', 'Slicing up the pork'],
-        beer: ['Tap me an IPA please', 'Shaken, not stirred', 'A whiskey on the rock', 'A guinness a day, keeps the doctor away', 'In wine there is truth']
+      meal: ['Rolling up some meatballs', 'Sniffing for hot sausage', 'Wrapping up tacos', 'Firing up the grill', 'Pouring some hot choco', 'Putting a cherry on top', 'Laying Bacon strips!', 'Opening duck season', 'Chickening out', 'Slicing up the pork'],
+      beer: ['Tap me an IPA please', 'Shaken, not stirred', 'A whiskey on the rock', 'A guinness a day, keeps the doctor away', 'In wine there is truth']
     };
 
     $scope.texts = allTexts.meal;
@@ -40,12 +42,12 @@ angular.module('lunchButtonApp')
         $window.navigator.splashscreen.hide();
       });
     }
-    
+
     function trackShake(event) {
       var eventId = event ? 'Shaked' : 'Clicked';
       Analytics.trackEvent('interaction', 'GetVenue', eventId);
     }
-    
+
     $scope.showVenue = function ($event, venue) {
       Analytics.trackPageView('ViewVenue');
       Analytics.trackEvent('interaction', 'ViewVenue', venue.name, venue.id);
@@ -61,11 +63,19 @@ angular.module('lunchButtonApp')
         });
     };
 
-    $scope.openMap = function ($event, url) {
+    $scope.openMap = function ($event) {
+      if (!$scope.venue.location || !$scope.venue.location.lat) {
+        $event.preventDefault();
+        return;
+      }
       $scope.openInSystemBrowser($event, 'http://maps.apple.com/?q=' + $scope.venue.location.lat + ',' + $scope.venue.location.lng);
     };
 
     $scope.callNumber = function ($event, number) {
+      if (!number) {
+        $event.preventDefault();
+        return;
+      }
       if (Utils.isCordova() || Utils.isMobile()) {
         $window.location.href = 'tel:' + number;
       } else {
@@ -83,13 +93,21 @@ angular.module('lunchButtonApp')
     };
 
     var cachedVenues = [];
-    
+    var lastDistance;
+    var lastCategory;
+
     $scope.getLunchVenue = function (category, id, event) {
       if ($scope.loading) {
         return;
       }
 
+      var minimumTimeout = $timeout(angular.noop, TEXT_TIMEOUT);
+
       category = category || $rootScope.currentCategory || 'meal';
+
+      lastDistance = $scope.search.distance;
+      lastCategory = category;
+
       $scope.texts = allTexts[category];
 
       trackShake(event);
@@ -100,39 +118,46 @@ angular.module('lunchButtonApp')
 
       var position;
       getCurrentPosition().then(function (pos) {
-          position = pos;
+        position = pos;
 
-          if (id) {
-            return $q.when({id: id});
-          }
+        if (id) {
+          return $q.when({id: id});
+        }
 
-          if (cachedVenues && cachedVenues.length) {
-            return $q.when(cachedVenues).then(getRandomVenue);
-          }
+        // if distance or category are changed, cache needs to be invalidated
+        if (lastDistance === $scope.search.distance &&
+          lastCategory === category &&
+          cachedVenues && cachedVenues.length) {
+          return $q.when(cachedVenues).then(getRandomVenue);
+        }
 
-          return Foursquareapi.getVenues(position, category, $scope.search.distance).catch(function () {
-            return $q.reject({
-              title: 'Network Issue',
-              message: 'Out of Internetz?!\nConnect & Try again.'
-            });
-          }).then(getRandomVenue);
-        }).then(function (venue) {
-          return Foursquareapi.getOneVenue(venue.id, position);
-        }).then(function (venue) {
-          Analytics.trackEvent('venue', 'found', venue.name, venue.id);
-
-          $scope.venue = venue;
-          $scope.tip = Foursquareapi.getRandomTipForVenue(venue);
-          $scope.done = true;
-        }).catch(function (errObj) {
-          if (Utils.isCordova()) {
-            $window.navigator.notification.alert(errObj.message, angular.noop, errObj.title);
-          } else {
-            $scope.errorMessage = $sce.trustAsHtml($filter('nl2br')(errObj.message));
-          }
-        }).finally(function () {
-          $scope.loading = false;
+        return Foursquareapi.getVenues(position, category, $scope.search.distance).catch(function () {
+          return $q.reject({
+            title: 'Network Issue',
+            message: 'Out of Internetz?!\nConnect & Try again.'
+          });
+        }).then(getRandomVenue);
+      }).then(function (venue) {
+        return Foursquareapi.getOneVenue(venue.id, position);
+      }).then(function (venue) {
+        return minimumTimeout.then(function () {
+          return venue;
         });
+      }).then(function (venue) {
+        Analytics.trackEvent('venue', 'found', venue.name, venue.id);
+
+        $scope.venue = venue;
+        $scope.tip = Foursquareapi.getRandomTipForVenue(venue);
+        $scope.done = true;
+      }).catch(function (errObj) {
+        if (Utils.isCordova()) {
+          $window.navigator.notification.alert(errObj.message, angular.noop, errObj.title);
+        } else {
+          $scope.errorMessage = $sce.trustAsHtml($filter('nl2br')(errObj.message));
+        }
+      }).finally(function () {
+        $scope.loading = false;
+      });
     };
 
     if ($location.search().id) {
@@ -150,7 +175,7 @@ angular.module('lunchButtonApp')
       lastTextIndex = index;
 
       $scope.loadingTextIndex = index;
-      loadingTimeout = $timeout(changeLoadingText, 2000);
+      loadingTimeout = $timeout(changeLoadingText, TEXT_TIMEOUT);
     }
 
     function cancelLoadingText () {
@@ -197,7 +222,7 @@ angular.module('lunchButtonApp')
       $rootScope.currentCategory = where;
     };
 
-    $scope.goBack = function (e) {
+    $scope.goBack = function () {
       $location.search('id', null);
       $scope.venue = null;
     };

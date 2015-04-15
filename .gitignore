@@ -12,7 +12,9 @@ ConfR.sublime-workspace
 app/bower_components
 app/scripts/constants.js
 .ftppass
+.fetch.json
 
-www
-!www/config.xml
-!www/res
+/www
+/platforms/ios/www
+!/www/config.xml
+!/www/res
