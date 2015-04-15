@@ -1,3 +1,23 @@
+2.0.1
+=====
+- Fix cache invalidation and add touch improvements
+
+2.0.0 (iOS 2.0.0)
+=====
+- LB-36 Fixed urls for sharing
+- LB-37 Added larger clickable area
+- LB-38 Removed desktop text and added TCC link
+- LB-41 Fixed unclear share functions
+- LB-39 Increased swiping area
+- LB-43 Added AdMob for iOS
+- LB-40 Added first attempt on dragging screens
+- LB-44 Increased button area
+- LB-45 Added persistent search distance
+- LB-46 Fixed swiping over the slider
+- LB-47 Increased size of the slider
+- LB-48 Cleanup framework references paths
+- LB-49 Fixed loading so at least one text is shown
+
 1.1.0
 =====
 - LB-35 Added venues links and improved sharing
