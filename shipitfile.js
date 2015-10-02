@@ -49,7 +49,7 @@ module.exports = function (shipit, tasks, cometaws) {
         shipit.task('cl:deploy', ['deploy']);
         shipit.blTask('cl:deploy-pr', () => {
             var prNumber = process.env.PR;
-            var deployTo = `/srv/prs/lunch-button/pr${process.env.PR}`;
+            var deployTo = `/srv/prs/lunch-button-www/pr${process.env.PR}`;
 
             // rsync changes to a PR directory
             return shipit.remote(`mkdir -p ${deployTo}`)
