@@ -1,6 +1,6 @@
 {
   "name": "lunchbutton",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "devDependencies": {
     "cometaws": "git+https://github.com/cometcult/cometaws.git#b669e84c8da5666c6ee4773f1bb3ba31ee65ac13",
     "cucumber": "~0.3.1",

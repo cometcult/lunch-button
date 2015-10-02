@@ -1,3 +1,7 @@
+2.0.2
+====
+- Add support for cometshipit deployment 
+
 2.0.1
 =====
 - Fix cache invalidation and add touch improvements
