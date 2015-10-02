@@ -2,6 +2,7 @@
   "name": "lunchbutton",
   "version": "2.0.1",
   "devDependencies": {
+    "cometaws": "git+https://github.com/cometcult/cometaws.git#b669e84c8da5666c6ee4773f1bb3ba31ee65ac13",
     "cucumber": "~0.3.1",
     "grunt": "~0.4.2",
     "grunt-angular-phonegap": "~0.1.7",
@@ -43,9 +44,11 @@
     "karma-requirejs": "~0.2.1",
     "karma-script-launcher": "~0.1.0",
     "load-grunt-tasks": "~0.2.0",
+    "ncp": "^2.0.0",
     "protractor": "git+https://github.com/angular/protractor.git",
     "requirejs": "~2.1.9",
     "selenium-webdriver": "~2.34.0",
+    "shipit-deploy": "^2.0.0",
     "time-grunt": "~0.2.0"
   },
   "engines": {
