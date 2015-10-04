@@ -1,3 +1,7 @@
+2.0.3 (hotfix)
+====
+- Fix cometship deployment deploy issue 
+
 2.0.2
 ====
 - Add support for cometshipit deployment 

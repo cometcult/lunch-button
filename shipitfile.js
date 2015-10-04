@@ -6,7 +6,6 @@
 // truthy value to deploy using internal IP addresses instead of external IPs
 
 const process = require('process');
-const ncp = require('ncp');
 const USE_PRIVATE_DNS = process.env.CL_USE_PRIVATE_DNS ? true : false;
 
 module.exports = function (shipit, tasks, cometaws) {
@@ -60,14 +59,10 @@ module.exports = function (shipit, tasks, cometaws) {
         });
 
         shipit.blTask('cl:copy-local-dist', () => {
-            return new Promise( (resolve, reject) => {
-                ncp(shipit.config.dirToCopy, shipit.config.workspace + '/' + shipit.config.dirToCopy, function (err) {
-                    if (err) {
-                        reject(err);
-                        return console.error(err);
-                    }
-                    resolve();
-                });
+            var destinationDirectory = `${shipit.config.workspace}/${shipit.config.dirToCopy}`;
+
+            return shipit.local(`rm -rf ${destinationDirectory}`).then( () => {
+                return shipit.local(`cp -rp ${shipit.config.dirToCopy} ${destinationDirectory}`);
             });
         });
         shipit.task('cl:nginx:reload', () => {
