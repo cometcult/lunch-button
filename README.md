@@ -1,5 +1,8 @@
 lunch-button
 ============
+[![Build Status](https://jenkins.cometlab.co/buildStatus/icon?job=Mealshaker/lunch-button/develop)](https://jenkins.cometlab.co/job/Mealshaker/job/lunch-button/branch/develop/)
+[![Dependency Status](https://jenkins.cometlab.co:446/cometcult/lunch-button.svg)](https://jenkins.cometlab.co:446/cometcult/lunch-button)
+[![devDependency Status](https://jenkins.cometlab.co:446/cometcult/lunch-button/dev-status.svg)](https://jenkins.cometlab.co:446/cometcult/lunch-button#info=devDependencies)
 
 Find a place for lunch
 
